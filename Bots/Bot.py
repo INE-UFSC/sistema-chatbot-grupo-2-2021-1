@@ -3,22 +3,23 @@
 from abc import ABC, abstractmethod
 import random as r
 
+
 class Bot(ABC):
 
-    def __init__(nome,):
-        self.nome = nome
+    def __init__(nome :str):
+        self.__nome = nome
         self.comandos = {}
 
-    #nao esquecer o decorator
+    @property
     def nome(self):
-        pass
+        return self.__nome
 
-    #nao esquecer o decorator
+    @nome.setter
     def nome(nome):
-        pass
+        self.__nome = nome
 
     def mostra_comandos(self):
-        pass
+        return(list(self.comandos))
 
     @abstractmethod
     def executa_comando(self,cmd):
