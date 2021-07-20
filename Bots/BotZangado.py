@@ -1,28 +1,17 @@
 from Bots.Bot import Bot
 
 class BotZangado(Bot):
-    def __init__(self,nome):
-        self.__nome = nome
+    def __init__(self, nome: str):
+        super().__init__(nome)
 
-    #nao esquecer o decorator
-    def nome(self):
-        pass
-
-    #nao esquecer o decorator
-    def nome(nome):
-        pass
-
-    def apresentacao(self):
-        pass
- 
-    def mostra_comandos(self):
-        pass
+    def apresentacao(self) -> str:
+        return ('Aff, estão me perturbando de novo! Eu sou o %s >:@' % self.__nome)
     
-    def executa_comando(self,cmd):
-        pass
+    def executa_comando(self, cmd: str) -> str:
+        return self.__comandos[cmd]
 
-    def boas_vindas(self):
-        pass
+    def boas_vindas(self) -> str:
+        return 'Meu deus, eu não tenho um dia de paz!!'
 
-    def despedida(self):
-        pass
+    def despedida(self) -> str:
+        return 'ALELUIA!!! Não aguentava mais.'
