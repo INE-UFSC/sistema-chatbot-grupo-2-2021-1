@@ -1,8 +1,8 @@
 from Bots.Bot import Bot
 
 class SistemaChatBot:
-    def __init__(self,nomeEmpresa,lista_bots):
-        self.__empresa=nomeEmpresa
+    def __init__(self,nome_empresa,lista_bots):
+        self.__empresa=nome_empresa
         self.__lista_bots=lista_bots
         self.__bot = None
     
