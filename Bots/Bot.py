@@ -6,9 +6,9 @@ import random as r
 
 class Bot(ABC):
 
-    def __init__(nome :str):
+    def __init__(self, nome :str):
         self.__nome = nome
-        self.comandos = {}
+        self.__comandos = {}
 
     @property
     def nome(self):
@@ -18,8 +18,14 @@ class Bot(ABC):
     def nome(nome):
         self.__nome = nome
 
+    @property
+    def comandos(self):
+        return self.__comandos
+
     def mostra_comandos(self):
-        return(list(self.comandos))
+        a = list(self.__comandos)
+        for i in range(len(comandos)):
+            print( str(i + 1) + " - " + str(a[i]))
 
     @abstractmethod
     def executa_comando(self,cmd):
