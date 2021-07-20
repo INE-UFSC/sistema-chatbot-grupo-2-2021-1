@@ -15,7 +15,7 @@ class Bot(ABC):
         return self.__nome
 
     @nome.setter
-    def nome(nome):
+    def nome(self, nome):
         self.__nome = nome
 
     @property
@@ -24,7 +24,7 @@ class Bot(ABC):
 
     def mostra_comandos(self):
         a = list(self.__comandos)
-        for i in range(len(comandos)):
+        for i in range(len(self.__comandos)):
             print( str(i + 1) + " - " + str(a[i]))
 
     @abstractmethod
