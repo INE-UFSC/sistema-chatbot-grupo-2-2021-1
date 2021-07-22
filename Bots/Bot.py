@@ -5,7 +5,6 @@ import random as r
 
 
 class Bot(ABC):
-
     def __init__(self, nome :str):
         self.__nome = nome
         self.__comandos = {"1" : "Bom dia","2" : "Qual o seu nome?", "3" : "Quero um conselho", "4" : "Adeus"}
@@ -18,13 +17,9 @@ class Bot(ABC):
     def nome(self, nome):
         self.__nome = nome
 
-    @property
-    def comandos(self):
-        return self.__comandos
-
     def mostra_comandos(self):
-        for i in range(len(self.__comandos)):
-            print( str(i + 1) + " - " + str(self.__comandos[i+1]))
+        for i in self.__comandos:
+            print(i + " - " + self.__comandos[i])
 
     @abstractmethod
     def executa_comando(self,cmd):
