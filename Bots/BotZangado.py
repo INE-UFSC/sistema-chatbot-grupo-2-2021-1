@@ -1,10 +1,6 @@
 from Bots.Bot import Bot
 
 class BotZangado(Bot):
-    comandos = {"1": "Bom dia", 
-                "2": "Qual o seu nome?",
-                "3": "Quero um conselho",
-                "4": "Adeus"}
     
     def __init__(self, nome: str):
         super().__init__(nome)

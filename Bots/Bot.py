@@ -16,6 +16,14 @@ class Bot(ABC):
     @nome.setter
     def nome(self, nome):
         self.__nome = nome
+    
+    @property
+    def comandos(self):
+        return self.__comandos
+
+    @comandos.setter
+    def comandos(self, comandos):
+        self.__comandos = comandos
 
     def mostra_comandos(self):
         for i in self.__comandos:
